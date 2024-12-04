@@ -4,10 +4,10 @@
         <attribute name="name" value="T06"/>
         <attribute name="authors" value="Msi GF 63"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-12-04 04:03:46 PM"/>
+        <attribute name="saved" value="2024-12-04 04:22:07 PM"/>
         <attribute name="created" value="TXNpIEdGIDYzO01TSTsyMDI0LTExLTIwOzA4OjQxOjE3IEFNOzIxMDI="/>
         <attribute name="edited" value="TXNpIEdGIDYzO01TSTsyMDI0LTExLTIwOzA5OjE0OjMwIEFNOzE7MjIwNg=="/>
-        <attribute name="edited" value="VXNlcjtFTEFLSzsyMDI0LTEyLTA0OzA0OjAzOjQ2IFBNOzE7MjE1OQ=="/>
+        <attribute name="edited" value="VXNlcjtFTEFLSzsyMDI0LTEyLTA0OzA0OjIyOjA3IFBNOzM7MjE1OQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -22,9 +22,9 @@
             <parameter name="nama" type="String" array="True"/>
         </parameters>
         <body>
-            <declare name="l" type="Integer" array="False" size=""/>
-            <for variable="l" start="0" end="3" direction="inc" step="1">
-                <assign variable="nama[l]" expression="&quot;&quot;"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <assign variable="nama[i]" expression="&quot;&quot;"/>
             </for>
         </body>
     </function>
@@ -57,7 +57,12 @@
         <body>
             <declare name="c" type="Integer" array="False" size=""/>
             <for variable="c" start="0" end="3" direction="inc" step="1">
-                <output expression="nama[c]" newline="True"/>
+                <if expression="nama[c] == &quot;&quot;">
+                    <then/>
+                    <else>
+                        <output expression="nama[c]" newline="True"/>
+                    </else>
+                </if>
             </for>
         </body>
     </function>

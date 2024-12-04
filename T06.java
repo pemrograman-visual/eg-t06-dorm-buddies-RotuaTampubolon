@@ -1,6 +1,5 @@
 // 12S24028 - Rotua Immanuela Tampubolon
-// 12S24001 - Petra Ignatius Penganyoman Naibaho
-
+// 12S24001 - Petra Ignatius Pengayoman Naibaho
 import java.util.*;
 import java.lang.Math;
 
@@ -15,10 +14,10 @@ public class T06 {
     }
     
     public static void fungsi1(String[] nama) {
-        int l;
+        int i;
 
-        for (l = 0; l <= 3; l++) {
-            nama[l] = "";
+        for (i = 0; i <= 3; i++) {
+            nama[i] = "";
         }
     }
     
@@ -42,7 +41,10 @@ public class T06 {
         int c;
 
         for (c = 0; c <= 3; c++) {
-            System.out.println(nama[c]);
+            if (nama[c].equals("")) {
+            } else {
+                System.out.println(nama[c]);
+            }
         }
     }
 }
